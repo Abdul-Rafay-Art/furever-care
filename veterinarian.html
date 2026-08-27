@@ -500,7 +500,17 @@ img {
   h1 { font-size: 2.25rem; }
   h2 { font-size: 1.85rem; }
   .section { padding: 65px 0; }
-  .nav-links { display: none; }
+  .site-header { height: auto; }
+  .nav-wrapper { flex-wrap: wrap; }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    order: 5;
+    width: 100%;
+    padding-top: 8px;
+    justify-content: flex-end;
+  }
   .mobile-menu-toggle { display: block; }
 }
 
@@ -513,6 +523,10 @@ img {
     font-size: 1.35rem;
     gap: 8px;
   }
+  .brand-logo svg {
+    width: 36px;
+    height: 36px;
+  }
   .brand-logo .paw-icon {
     width: 34px;
     height: 34px;
@@ -522,6 +536,9 @@ img {
     padding: 7px 14px;
     font-size: 0.82rem;
     gap: 6px;
+  }
+  .btn-switch-role {
+    display: none !important;
   }
   h1 { font-size: 1.95rem; }
   h2 { font-size: 1.6rem; }
@@ -2368,6 +2385,81 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .booking-hero-card { padding: 22px; }
+  .modal-header { padding: 16px 20px; }
+  .modal-body { padding: 20px; }
+  .doctor-card-image-wrap { height: 240px; }
+  .history-card-img-wrap { height: 180px; }
+  .success-celebration-card { padding: 34px 24px; }
+  .wizard-footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .wizard-footer-nav .btn { width: 100%; }
+}
+
+@media (max-width: 560px) {
+  .wizard-progress-bar { margin-bottom: 26px; }
+  .wizard-progress-bar::before { top: 19px; left: 20px; right: 20px; }
+  .step-bubble { width: 38px; height: 38px; font-size: 0.95rem; }
+  .wizard-step-item { gap: 6px; }
+  .step-label { font-size: 0.62rem; }
+  .slot-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .slot-card-footer .btn { width: 100%; }
+  .slot-datetime-badge { flex-wrap: wrap; gap: 6px; }
+  .doctor-card-actions { grid-template-columns: 1fr; }
+  .upload-preview-area {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .upload-preview-area > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .preview-thumb { width: 110px; height: 110px; }
+  .upload-preview-area .btn { width: auto; }
+  .success-ticket-box { padding: 18px; }
+  .appointment-header-band { padding: 14px 16px; }
+}
+
+@media (max-width: 480px) {
+  h3 { font-size: 1.4rem; }
+  .section-title { font-size: 1.6rem; }
+  .form-step-title { font-size: 1.4rem; }
+  .success-title { font-size: 1.7rem; }
+  .hero-cover-container { aspect-ratio: 4 / 3; }
+  .hero-hotspot-btn-left { height: 13%; }
+  .hero-hotspot-btn-arrow { height: 18%; }
+  .booking-hero-card { padding: 20px; }
+  .booking-hero-doc { gap: 14px; }
+  .booking-hero-doc-img { width: 64px; height: 64px; }
+  .booking-hero-doc-text h2 { font-size: 1.45rem; }
+  .doctor-name { font-size: 1.3rem; }
+  .pet-info-block h4 { font-size: 1.28rem; }
+  .appointment-header-band h3 { font-size: 1.1rem; }
+  .history-pet-title { font-size: 1.2rem; }
+  .wizard-form-card { padding: 18px; }
+  .success-celebration-card { padding: 28px 18px; }
+  .summary-review-card { padding: 22px; }
+}
+
+@media (max-width: 360px) {
+  .step-bubble { width: 32px; height: 32px; font-size: 0.85rem; }
+  .step-label { display: none; }
+  .wizard-step-item { gap: 4px; }
+  .doctor-card-image-wrap { height: 210px; }
+  .history-card-img-wrap { height: 160px; }
+}
+
 </style>
 </head>
 
@@ -3041,8 +3133,17 @@ img {
 
   
   <footer class="site-footer" style="position:relative;overflow:hidden;background:#0B2826;color:#FFF6DF;padding:clamp(46px,7vh,70px) clamp(20px,5vw,70px) 22px;">
+    <style>
+      @media (max-width: 1024px) {
+        .foot-grid { grid-template-columns: 1fr 1fr !important; }
+      }
+      @media (max-width: 560px) {
+        .foot-grid { grid-template-columns: 1fr !important; }
+        .foot-paw-bg { font-size: 200px !important; }
+      }
+    </style>
     <i class="fa-solid fa-paw footer-paw-bg" style="position:absolute;font-size:340px;color:rgba(255,246,223,.04);right:-60px;bottom:-90px;transform:rotate(-18deg);pointer-events:none;"></i>
-    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px;max-width:1180px;margin:0 auto;padding-bottom:36px;border-bottom:2px dashed rgba(255,246,223,.15);">
+    <div class="foot-grid" style="position:relative;z-index:1;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px;max-width:1180px;margin:0 auto;padding-bottom:36px;border-bottom:2px dashed rgba(255,246,223,.15);">
       <div>
         <div style="display:flex;align-items:center;gap:10px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;margin-bottom:12px;">
           <svg viewBox="0 0 120 120" width="30" height="30"><use href="#brand-logo"/></svg>
