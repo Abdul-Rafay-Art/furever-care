@@ -47,6 +47,7 @@
       color: var(--ink);
       position: relative;
       isolation: isolate;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -1346,15 +1347,18 @@
 
       .hero-inner,
       .quick-links,
-      .pet-grid,
-      .story-list,
-      .event-grid,
       .two-col,
       .footer-inner,
       .page-grid,
       .detail-layout,
       .donate-layout {
         grid-template-columns: 1fr;
+      }
+
+      .pet-grid,
+      .story-list,
+      .event-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .contact-single-card {
@@ -1510,6 +1514,12 @@
     }
 
     @media (max-width: 768px) {
+      .pet-grid,
+      .story-list,
+      .event-grid {
+        grid-template-columns: 1fr;
+      }
+
       .header-inner {
         flex-wrap: wrap;
         padding: 12px 0;
