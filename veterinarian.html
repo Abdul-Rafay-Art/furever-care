@@ -510,6 +510,11 @@ img {
 .delay-3 { animation-delay: 0.36s; }
 .delay-4 { animation-delay: 0.48s; }
 
+@media (min-width: 993px) {
+  .nav-switch-role {
+    display: none;
+  }
+}
 
 @media (max-width: 992px) {
   h1 { font-size: 2.25rem; }
@@ -519,6 +524,17 @@ img {
   .mobile-menu-toggle { display: flex; }
   .nav-wrapper { flex-wrap: wrap; position: relative; }
   .nav-wrapper > nav { order: 6; width: 100%; }
+  .nav-wrapper > .btn-switch-role { display: none !important; }
+  .nav-switch-role {
+    margin-top: 6px;
+  }
+  .nav-switch-role .btn-switch-role {
+    width: 100% !important;
+    justify-content: center;
+  }
+  .nav-links a.btn-switch-role::after {
+    display: none;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
@@ -573,13 +589,9 @@ img {
     gap: 6px;
   }
   .btn-switch-role {
-    display: inline-flex !important;
-    padding: 7px 12px !important;
-    font-size: 12px !important;
-    gap: 5px !important;
-  }
-  .btn-switch-role span {
-    display: none;
+    font-size: 12.5px !important;
+    padding: 8px 14px !important;
+    gap: 6px !important;
   }
   h1 { font-size: 1.95rem; }
   h2 { font-size: 1.6rem; }
@@ -2534,6 +2546,7 @@ img {
           <li><a href="#appointments-section">Appointments</a></li>
           <li><a href="#my-appointments-section" id="nav-my-booking-link">My Pet & Booking</a></li>
           <li><a href="#history-section">Medical History</a></li>
+          <li class="nav-switch-role"><a href="role.html" class="btn-switch-role" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:#123C3A;color:#FFF6DF;font-family:'Fredoka',sans-serif;font-weight:600;font-size:13px;text-decoration:none;transition:transform .2s;"><i class="fa-solid fa-shuffle"></i> <span>Switch Role</span></a></li>
         </ul>
       </nav>
 
