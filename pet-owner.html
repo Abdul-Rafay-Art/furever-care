@@ -1458,6 +1458,32 @@
       animation: modalOut 0.35s ease forwards;
     }
 
+    .modal-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 6;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--purple);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(36, 21, 66, 0.25);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--red);
+      color: #fff;
+      transform: rotate(90deg) scale(1.08);
+    }
+
     @keyframes modalPop {
       0% {
         opacity: 0;
@@ -1962,7 +1988,7 @@
       }
 
       .profile-popup {
-        right: 6px;
+        right: -10px;
       }
 
       .nav-hamburger {
@@ -2134,9 +2160,8 @@
       }
 
       .profile-popup {
-        width: min(280px, calc(100vw - 32px));
-        min-width: 0;
-        right: 8px;
+        min-width: 240px;
+        right: -30px;
         max-width: 280px;
       }
 
@@ -2290,7 +2315,7 @@
         </div>
 
         <div class="nav-dropdown">
-          <a href="https://facebook.com/" target="_blank" rel="noopener" class="nav-link">About <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="about.html" class="nav-link">About <i class="fa-solid fa-chevron-down"></i></a>
           <div class="nav-dropdown-content">
             <a href="about.html"><i class="fa-solid fa-circle-info" style="margin-right:8px"></i>About Us</a>
             <a href="feedback.html"><i class="fa-solid fa-comment" style="margin-right:8px"></i>Feedback</a>
@@ -2507,6 +2532,8 @@
       <span class="corner-paw cp-tr"><i class="fa-solid fa-paw"></i></span>
       <span class="corner-paw cp-bl"><i class="fa-solid fa-paw"></i></span>
       <span class="corner-paw cp-br"><i class="fa-solid fa-paw"></i></span>
+      <button type="button" class="modal-close" id="modalClose" title="Close (skip for now)" aria-label="Close"><i
+          class="fa-solid fa-xmark"></i></button>
       <div class="modal-frame-inner">
         <form class="pet-modal" id="petForm" novalidate>
           <div class="ribbon-wrap">
@@ -2583,17 +2610,27 @@
     try { sessionStorage.removeItem('fureverGuest'); } catch (e) { }
     var ownerUsername = '';
     try { ownerUsername = sessionStorage.getItem('fureverUsername') || ''; sessionStorage.removeItem('fureverUsername'); } catch(e){}
+    var savedPet = null;
+    try { savedPet = JSON.parse(sessionStorage.getItem('fureverPet') || 'null'); } catch (e) { savedPet = null; }
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem('fureverPetDismissed') === '1'; } catch (e) { }
     if (isGuest) {
       petData = null;
       buildProfilePopup(null);
       enterDashboard(false);
+    } else if (savedPet) {
+      petData = savedPet;
+      updateAllUI(petData);
+      enterDashboard(false);
+    } else if (dismissed) {
+      petData = null;
+      buildProfilePopup(null);
+      enterDashboard(false);
     } else {
-      sessionStorage.removeItem('fureverPet');
-      sessionStorage.removeItem('fec_entered');
-      document.body.classList.add('modal-open');
-      if(ownerUsername){
+      showModal();
+      if (ownerUsername) {
         var uh = document.querySelector('.hero-right h1');
-        if(uh) uh.innerHTML = 'Smart care,<br><span class="hl-accent">' + ownerUsername + '</span>';
+        if (uh) uh.innerHTML = 'Smart care,<br><span class="hl-accent">' + ownerUsername + '</span>';
       }
     }
 
@@ -2629,6 +2666,7 @@
         photo: photoDataUrl
       };
       try { sessionStorage.setItem('fureverPet', JSON.stringify(petData)); } catch (e) { }
+      try { sessionStorage.removeItem('fureverPetDismissed'); } catch (e) { }
       enterDashboard(true);
     });
 
@@ -2688,6 +2726,19 @@
       });
     }
 
+    function dismissModal() {
+      try { sessionStorage.setItem('fureverPetDismissed', '1'); } catch (e) { }
+      petData = null;
+      buildProfilePopup(null);
+      enterDashboard(false);
+    }
+
+    $('modalClose').addEventListener('click', dismissModal);
+
+    modalOverlay.addEventListener('click', e => {
+      if (e.target === modalOverlay) dismissModal();
+    });
+
     petProfileBtn.addEventListener('click', e => {
       e.stopPropagation();
       const w = profilePopup.classList.contains('open');
@@ -2746,6 +2797,9 @@
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
+        if (document.body.classList.contains('modal-open')) {
+          dismissModal();
+        }
         closeAll();
       }
     });
