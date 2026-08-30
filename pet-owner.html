@@ -2781,7 +2781,7 @@
 
     document.querySelectorAll('.nav-links .nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 900 && !link.closest('.nav-dropdown')) closeAll();
+        if (window.innerWidth <= 900) closeAll();
       });
     });
 

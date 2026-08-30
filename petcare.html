@@ -1088,13 +1088,15 @@ navHamburger.addEventListener('click', e => {
 document.querySelectorAll('.nav-dropdown > a').forEach(link => {
   link.addEventListener('click', e => {
     if (window.innerWidth > 900) return;
-    if (link.parentElement.querySelector('.nav-dropdown-content')) {
-      e.preventDefault(); e.stopPropagation(); link.parentElement.classList.toggle('mobile-open');
+    if (link.getAttribute('href') === '#' || link.closest('.nav-dropdown').querySelector('.nav-dropdown-content')) {
+      if (link.parentElement.querySelector('.nav-dropdown-content') && (link.getAttribute('href') === '#')) {
+        e.preventDefault(); e.stopPropagation(); link.parentElement.classList.toggle('mobile-open');
+      }
     }
   });
 });
 document.querySelectorAll('.nav-links .nav-link').forEach(link => {
-  link.addEventListener('click', () => { if (window.innerWidth <= 900 && !link.closest('.nav-dropdown')) closeAll(); });
+  link.addEventListener('click', () => { if (window.innerWidth <= 900) closeAll(); });
 });
 window.addEventListener('resize', () => { if (window.innerWidth > 900) closeAll(); });
 document.addEventListener('click', e => {
