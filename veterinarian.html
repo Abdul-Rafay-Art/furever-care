@@ -27,63 +27,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
-:root {
-  
-  --color-primary: #481F72;
-  --color-primary-dark: #37155a;
-  --color-primary-light: #5f2b96;
-  --color-primary-muted: rgba(72, 31, 114, 0.08);
-  --color-primary-semi: rgba(72, 31, 114, 0.16);
-
-  --color-accent: #FEA3B6;
-  --color-accent-hover: #fa8ea4;
-  --color-accent-light: #fff0f3;
-  --color-accent-dark: #e0778c;
-
-  --color-blush: #FDEDED;
-  --color-blush-soft: #fcf4f4;
-  --color-blush-border: #f8d5db;
-
-  --color-white: #FFFFFF;
-  --color-booked-bg: #4c4355;
-  --color-booked-text: #e2dde7;
-  --color-booked-border: #645b6e;
-
-  --color-text-main: #2D1B36;
-  --color-text-muted: #6e5e78;
-  --color-text-light: #9a8a9e;
-
-  
-  --font-heading: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  
-  --shadow-xs: 0 2px 6px rgba(72, 31, 114, 0.04);
-  --shadow-sm: 0 4px 14px rgba(72, 31, 114, 0.07);
-  --shadow-md: 0 8px 24px rgba(72, 31, 114, 0.10);
-  --shadow-lg: 0 16px 40px rgba(72, 31, 114, 0.14);
-  --shadow-hover: 0 20px 48px rgba(72, 31, 114, 0.18);
-  --shadow-glow: 0 0 25px rgba(254, 163, 182, 0.45);
-
-  
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  --radius-pill: 9999px;
-
-  
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-
-  
-  --max-width: 1280px;
-  --header-height: 80px;
-}
-
-
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -96,9 +39,9 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-white);
-  color: var(--color-text-main);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FFFFFF;
+  color: #2D1B36;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -108,8 +51,8 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .font-title {
-  font-family: var(--font-heading);
-  color: var(--color-primary);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #481F72;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -122,19 +65,19 @@ h5 { font-size: 1.1rem; }
 h6 { font-size: 0.95rem; }
 
 p {
-  font-family: var(--font-body);
-  color: var(--color-text-muted);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #6e5e78;
   font-size: 1rem;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: var(--transition-fast);
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button, input, select, textarea {
-  font-family: var(--font-body);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.95rem;
   border: none;
   outline: none;
@@ -142,9 +85,9 @@ button, input, select, textarea {
 
 button {
   cursor: pointer;
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 500;
-  transition: var(--transition-normal);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
@@ -157,7 +100,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
@@ -170,13 +113,13 @@ img {
 }
 
 .section-blush {
-  background-color: var(--color-blush);
-  border-top: 1px solid var(--color-blush-border);
-  border-bottom: 1px solid var(--color-blush-border);
+  background-color: #FDEDED;
+  border-top: 1px solid #f8d5db;
+  border-bottom: 1px solid #f8d5db;
 }
 
 .section-white {
-  background-color: var(--color-white);
+  background-color: #FFFFFF;
 }
 
 
@@ -190,12 +133,12 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-blush);
-  color: var(--color-primary);
-  border: 1px solid var(--color-accent);
+  background-color: #FDEDED;
+  color: #481F72;
+  border: 1px solid #FEA3B6;
   padding: 6px 18px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
+  border-radius: 9999px;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -204,18 +147,18 @@ img {
 }
 
 .section-blush .section-tag {
-  background-color: var(--color-white);
+  background-color: #FFFFFF;
 }
 
 .section-title {
   font-size: 2.35rem;
   margin-bottom: 14px;
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   line-height: 1.6;
 }
 
@@ -229,10 +172,10 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(72, 31, 114, 0.08);
-  height: var(--header-height);
+  height: 80px;
   display: flex;
   align-items: center;
-  transition: var(--transition-normal);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-wrapper {
@@ -246,18 +189,18 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   user-select: none;
 }
 
 .brand-logo .paw-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  color: var(--color-white);
+  background: linear-gradient(135deg, #481F72, #FEA3B6);
+  color: #FFFFFF;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -266,7 +209,7 @@ img {
 }
 
 .brand-logo span.accent {
-  color: var(--color-accent-dark);
+  color: #e0778c;
 }
 
 .nav-links {
@@ -277,10 +220,10 @@ img {
 }
 
 .nav-links a {
-  font-family: var(--font-body);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
   font-size: 0.98rem;
-  color: var(--color-primary);
+  color: #481F72;
   position: relative;
   padding: 6px 0;
 }
@@ -292,9 +235,9 @@ img {
   left: 0;
   width: 0;
   height: 2.5px;
-  background: var(--color-accent);
+  background: #FEA3B6;
   border-radius: 4px;
-  transition: width var(--transition-normal);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover::after,
@@ -309,10 +252,10 @@ img {
 }
 
 .btn-nav-book {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #481F72;
+  color: #FFFFFF;
   padding: 10px 22px;
-  border-radius: var(--radius-pill);
+  border-radius: 9999px;
   font-size: 0.92rem;
   display: inline-flex;
   align-items: center;
@@ -321,40 +264,40 @@ img {
 }
 
 .btn-nav-book:hover {
-  background: var(--color-primary-light);
+  background: #5f2b96;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(72, 31, 114, 0.25);
 }
 
 .booking-badge-counter {
-  background: var(--color-accent);
-  color: var(--color-primary);
+  background: #FEA3B6;
+  color: #481F72;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 2px 7px;
-  border-radius: var(--radius-pill);
+  border-radius: 9999px;
 }
 
 .mobile-menu-toggle {
   display: none;
   background: none;
   font-size: 1.6rem;
-  color: var(--color-primary);
+  color: #481F72;
   width: 44px;
   height: 44px;
   border-radius: 12px;
   align-items: center;
   justify-content: center;
   border: 1.5px solid rgba(72, 31, 114, 0.15);
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-toggle:hover {
-  background: var(--color-blush);
+  background: #FDEDED;
 }
 
 .site-header.is-open .mobile-menu-toggle {
-  color: var(--color-accent-dark);
+  color: #e0778c;
 }
 
 
@@ -365,63 +308,63 @@ img {
   justify-content: center;
   gap: 10px;
   padding: 12px 28px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
+  border-radius: 9999px;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
   white-space: nowrap;
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  background-color: #481F72;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
+  background-color: #5f2b96;
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(72, 31, 114, 0.22);
 }
 
 .btn-accent {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
+  background-color: #FEA3B6;
+  color: #481F72;
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .btn-accent:hover {
-  background-color: var(--color-accent-hover);
+  background-color: #fa8ea4;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 0 25px rgba(254, 163, 182, 0.45);
 }
 
 .btn-outline-white {
   background-color: rgba(255, 255, 255, 0.12);
-  color: var(--color-white);
-  border-color: var(--color-white);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
   backdrop-filter: blur(8px);
 }
 
 .btn-outline-white:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: #FFFFFF;
+  color: #481F72;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline-primary {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: #481F72;
+  border-color: #481F72;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: #481F72;
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
@@ -446,8 +389,8 @@ img {
   align-items: center;
   gap: 6px;
   padding: 5px 14px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
+  border-radius: 9999px;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -455,29 +398,29 @@ img {
 }
 
 .badge-available {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
+  background-color: #FEA3B6;
+  color: #481F72;
   border: 1px solid rgba(72, 31, 114, 0.12);
 }
 
 .badge-booked {
-  background-color: var(--color-booked-bg);
-  color: var(--color-booked-text);
-  border: 1px solid var(--color-booked-border);
+  background-color: #4c4355;
+  color: #e2dde7;
+  border: 1px solid #645b6e;
 }
 
 .badge-specialization {
-  background-color: var(--color-blush);
-  color: var(--color-primary);
-  border: 1px solid var(--color-accent);
-  font-family: var(--font-heading);
+  background-color: #FDEDED;
+  color: #481F72;
+  border: 1px solid #FEA3B6;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.82rem;
   font-weight: 500;
 }
 
 .badge-new-appointment {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent-dark));
-  color: var(--color-white);
+  background: linear-gradient(135deg, #481F72, #e0778c);
+  color: #FFFFFF;
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(72, 31, 114, 0.25);
   animation: pulse-glow 2.5s infinite;
@@ -619,11 +562,11 @@ img {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 16px 42px rgba(72, 31, 114, 0.16);
-  border: 2px solid var(--color-accent);
-  background: var(--color-primary);
+  border: 2px solid #FEA3B6;
+  background: #481F72;
   aspect-ratio: 1024 / 683;
   line-height: 0;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-cover-container:hover {
@@ -646,12 +589,12 @@ img {
   left: 8.8%;
   width: 21.8%;
   height: 10%;
-  border-radius: var(--radius-pill);
+  border-radius: 9999px;
   cursor: pointer;
   z-index: 10;
   display: block;
   background: transparent;
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
@@ -681,7 +624,7 @@ img {
   z-index: 10;
   display: block;
   background: transparent;
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
@@ -706,28 +649,28 @@ img {
   right: 20px;
   z-index: 12;
   background: rgba(255, 255, 255, 0.94);
-  border: 1.5px solid var(--color-accent);
-  border-radius: var(--radius-pill);
+  border: 1.5px solid #FEA3B6;
+  border-radius: 9999px;
   padding: 8px 16px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
+  box-shadow: 0 8px 24px rgba(72, 31, 114, 0.10);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   user-select: none;
 }
 
 .hero-uploader-control:hover {
-  background: var(--color-white);
-  color: var(--color-primary-dark);
+  background: #FFFFFF;
+  color: #37155a;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 0 25px rgba(254, 163, 182, 0.45);
 }
 
 .hero-uploader-control:active {
@@ -744,32 +687,32 @@ img {
 }
 
 .hero-highlight-chip {
-  background: var(--color-white);
-  border: 1.5px solid var(--color-blush-border);
-  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border: 1.5px solid #f8d5db;
+  border-radius: 16px;
   padding: 14px 18px;
   display: flex;
   align-items: center;
   gap: 14px;
   box-shadow: 0 4px 14px rgba(72, 31, 114, 0.05);
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   cursor: pointer;
 }
 
 .hero-highlight-chip:hover {
   transform: translateY(-3px);
-  border-color: var(--color-accent);
+  border-color: #FEA3B6;
   box-shadow: 0 8px 24px rgba(72, 31, 114, 0.12);
-  background: var(--color-blush-soft);
+  background: #fcf4f4;
 }
 
 .hero-highlight-chip .highlight-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  color: var(--color-accent);
+  background: linear-gradient(135deg, #481F72, #5f2b96);
+  color: #FEA3B6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -785,15 +728,15 @@ img {
 }
 
 .hero-highlight-chip .highlight-text strong {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.98rem;
-  color: var(--color-primary);
+  color: #481F72;
   font-weight: 600;
 }
 
 .hero-highlight-chip .highlight-text span {
   font-size: 0.82rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
 }
 
 
@@ -804,47 +747,47 @@ img {
 }
 
 .service-select-card {
-  background: var(--color-blush);
-  border: 1.5px solid var(--color-blush-border);
-  border-radius: var(--radius-md);
+  background: #FDEDED;
+  border: 1.5px solid #f8d5db;
+  border-radius: 16px;
   padding: 16px 18px;
   display: flex;
   align-items: center;
   gap: 14px;
   cursor: pointer;
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-select-card:hover {
-  background: var(--color-white);
-  border-color: var(--color-accent);
+  background: #FFFFFF;
+  border-color: #FEA3B6;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 24px rgba(72, 31, 114, 0.10);
 }
 
 .service-icon-wrap {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-  color: var(--color-white);
+  background: linear-gradient(135deg, #481F72, #5f2b96);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
   flex-shrink: 0;
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 2px 6px rgba(72, 31, 114, 0.04);
 }
 
 .service-card-info h4 {
   font-size: 1.05rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 3px;
 }
 
 .service-card-info p {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   margin-bottom: 6px;
 }
 
@@ -854,8 +797,8 @@ img {
   position: relative;
   z-index: 5;
   background: linear-gradient(90deg, #37155a 0%, #481F72 50%, #37155a 100%);
-  border-top: 2px solid var(--color-accent);
-  border-bottom: 2px solid var(--color-accent);
+  border-top: 2px solid #FEA3B6;
+  border-bottom: 2px solid #FEA3B6;
   padding: 20px 16px;
   text-align: center;
   box-shadow: 0 8px 24px rgba(72, 31, 114, 0.22);
@@ -895,10 +838,10 @@ img {
 }
 
 .hero-ribbon-title {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: #FFFFFF;
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
@@ -908,7 +851,7 @@ img {
 }
 
 .hero-ribbon-title .ribbon-paw {
-  color: var(--color-accent);
+  color: #FEA3B6;
   font-size: 1.5rem;
   display: inline-block;
   animation: pawWiggle 3s ease-in-out infinite;
@@ -925,10 +868,10 @@ img {
 }
 
 .hero-ribbon-subtitle {
-  font-family: var(--font-body);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.08rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: #FEA3B6;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -988,7 +931,7 @@ img {
   .hero-highlight-chip {
     padding: 10px 12px;
     gap: 10px;
-    border-radius: var(--radius-sm);
+    border-radius: 10px;
   }
   .hero-highlight-chip .highlight-icon {
     width: 38px;
@@ -1107,22 +1050,22 @@ img {
 .user-appointments-section {
   display: none; 
   padding: 40px 0;
-  background: linear-gradient(180deg, #fff, var(--color-blush-soft));
-  border-bottom: 2px solid var(--color-blush-border);
+  background: linear-gradient(180deg, #fff, #fcf4f4);
+  border-bottom: 2px solid #f8d5db;
 }
 
 .user-appointment-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 2px solid var(--color-accent);
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(72, 31, 114, 0.10);
+  border: 2px solid #FEA3B6;
   overflow: hidden;
   margin-bottom: 24px;
 }
 
 .appointment-header-band {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #481F72;
+  color: #FFFFFF;
   padding: 16px 28px;
   display: flex;
   align-items: center;
@@ -1132,7 +1075,7 @@ img {
 }
 
 .appointment-header-band h3 {
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
@@ -1141,11 +1084,11 @@ img {
 
 .appointment-id-tag {
   background: rgba(254, 163, 182, 0.25);
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
+  border: 1px solid #FEA3B6;
+  color: #FEA3B6;
   padding: 3px 12px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
+  border-radius: 9999px;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.85rem;
 }
 
@@ -1161,10 +1104,10 @@ img {
   position: relative;
   width: 140px;
   height: 140px;
-  border-radius: var(--radius-md);
+  border-radius: 16px;
   overflow: hidden;
-  border: 3px solid var(--color-accent);
-  box-shadow: var(--shadow-sm);
+  border: 3px solid #FEA3B6;
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .pet-avatar-wrapper img {
@@ -1175,7 +1118,7 @@ img {
 
 .pet-info-block h4 {
   font-size: 1.45rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -1185,7 +1128,7 @@ img {
 .pet-meta-list {
   list-style: none;
   font-size: 0.92rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
 }
 
 .pet-meta-list li {
@@ -1195,27 +1138,27 @@ img {
 }
 
 .pet-meta-list strong {
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 .doctor-booked-summary {
-  background: var(--color-blush);
+  background: #FDEDED;
   padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-blush-border);
+  border-radius: 16px;
+  border: 1px solid #f8d5db;
 }
 
 .doctor-booked-summary .doc-heading {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   font-size: 1.05rem;
   margin-bottom: 4px;
 }
 
 .doctor-booked-summary .slot-highlight {
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   margin-top: 6px;
   font-size: 0.95rem;
 }
@@ -1235,21 +1178,21 @@ img {
 }
 
 .doctor-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
   border: 1px solid rgba(72, 31, 114, 0.08);
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .doctor-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--color-accent);
+  box-shadow: 0 20px 48px rgba(72, 31, 114, 0.18);
+  border-color: #FEA3B6;
 }
 
 .doctor-card-image-wrap {
@@ -1257,7 +1200,7 @@ img {
   width: 100%;
   height: 270px;
   overflow: hidden;
-  background-color: var(--color-blush);
+  background-color: #FDEDED;
 }
 
 .doctor-card-image-wrap img {
@@ -1278,15 +1221,15 @@ img {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
+  border-radius: 9999px;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   display: flex;
   align-items: center;
   gap: 5px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .doctor-rating-floating .star-icon {
@@ -1297,16 +1240,16 @@ img {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #481F72;
+  color: #FFFFFF;
   padding: 4px 12px;
-  border-radius: var(--radius-pill);
+  border-radius: 9999px;
   font-size: 0.76rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 5px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .doctor-card-body {
@@ -1318,14 +1261,14 @@ img {
 
 .doctor-name {
   font-size: 1.45rem;
-  color: var(--color-primary);
+  color: #481F72;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .doctor-subtitle {
   font-size: 0.88rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -1339,14 +1282,14 @@ img {
 
 .doctor-description {
   font-size: 0.94rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   line-height: 1.55;
   margin-bottom: 18px;
   flex-grow: 1;
 }
 
 .doctor-meta-details {
-  border-top: 1px solid var(--color-blush-border);
+  border-top: 1px solid #f8d5db;
   padding-top: 14px;
   margin-bottom: 20px;
   display: flex;
@@ -1359,22 +1302,22 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--color-text-muted);
+  color: #6e5e78;
 }
 
 .meta-detail-row i {
-  color: var(--color-primary);
+  color: #481F72;
   width: 16px;
   text-align: center;
 }
 
 .meta-detail-row a {
-  color: var(--color-primary);
+  color: #481F72;
   font-weight: 600;
 }
 
 .meta-detail-row a:hover {
-  color: var(--color-accent-dark);
+  color: #e0778c;
   text-decoration: underline;
 }
 
@@ -1388,17 +1331,17 @@ img {
 
 .slots-container {
   margin-top: 16px;
-  background: var(--color-blush-soft);
-  border-radius: var(--radius-md);
+  background: #fcf4f4;
+  border-radius: 16px;
   padding: 14px;
-  border: 1px solid var(--color-blush-border);
+  border: 1px solid #f8d5db;
 }
 
 .slots-header {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -1413,35 +1356,35 @@ img {
 
 .slot-chip {
   padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
+  border-radius: 9999px;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: all var(--transition-fast);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
 }
 
 
 .slot-chip.available {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
+  background-color: #FEA3B6;
+  color: #481F72;
   box-shadow: 0 2px 6px rgba(254, 163, 182, 0.35);
 }
 
 .slot-chip.available:hover {
   transform: scale(1.06);
-  background-color: var(--color-accent-hover);
+  background-color: #fa8ea4;
   box-shadow: 0 4px 10px rgba(254, 163, 182, 0.6);
 }
 
 
 .slot-chip.booked {
-  background-color: var(--color-booked-bg);
-  color: var(--color-booked-text);
+  background-color: #4c4355;
+  color: #e2dde7;
   opacity: 0.85;
   cursor: not-allowed;
 }
@@ -1454,10 +1397,10 @@ img {
 
 
 .appointments-filter-bar {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border-radius: 24px;
   padding: 24px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
   border: 1px solid rgba(72, 31, 114, 0.08);
   margin-bottom: 36px;
 }
@@ -1478,42 +1421,42 @@ img {
 .search-input-wrapper i {
   position: absolute;
   left: 18px;
-  color: var(--color-primary);
+  color: #481F72;
   font-size: 1.1rem;
 }
 
 .search-input-wrapper input {
   width: 100%;
   padding: 13px 18px 13px 48px;
-  background: var(--color-blush);
-  border: 1px solid var(--color-blush-border);
-  border-radius: var(--radius-pill);
+  background: #FDEDED;
+  border: 1px solid #f8d5db;
+  border-radius: 9999px;
   font-size: 0.95rem;
-  color: var(--color-text-main);
-  transition: var(--transition-normal);
+  color: #2D1B36;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-input-wrapper input:focus {
-  background: var(--color-white);
-  border-color: var(--color-accent);
+  background: #FFFFFF;
+  border-color: #FEA3B6;
   box-shadow: 0 0 0 3px rgba(254, 163, 182, 0.3);
 }
 
 .filter-select {
   padding: 13px 18px;
-  background: var(--color-blush);
-  border: 1px solid var(--color-blush-border);
-  border-radius: var(--radius-pill);
+  background: #FDEDED;
+  border: 1px solid #f8d5db;
+  border-radius: 9999px;
   font-size: 0.92rem;
-  color: var(--color-primary);
+  color: #481F72;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition-normal);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-select:focus {
-  background: var(--color-white);
-  border-color: var(--color-accent);
+  background: #FFFFFF;
+  border-color: #FEA3B6;
   box-shadow: 0 0 0 3px rgba(254, 163, 182, 0.3);
 }
 
@@ -1526,22 +1469,22 @@ img {
 
 .filter-pill-btn {
   padding: 7px 18px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
+  border-radius: 9999px;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
-  background: var(--color-blush);
-  color: var(--color-primary);
-  border: 1px solid var(--color-blush-border);
-  transition: var(--transition-fast);
+  background: #FDEDED;
+  color: #481F72;
+  border: 1px solid #f8d5db;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
 .filter-pill-btn.active,
 .filter-pill-btn:hover {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
+  background: #481F72;
+  color: #FFFFFF;
+  border-color: #481F72;
 }
 
 
@@ -1552,21 +1495,21 @@ img {
 }
 
 .appointment-slot-card {
-  background: var(--color-white);
-  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border-radius: 16px;
   border: 1px solid rgba(72, 31, 114, 0.08);
   padding: 22px;
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 2px 6px rgba(72, 31, 114, 0.04);
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .appointment-slot-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-accent);
+  box-shadow: 0 8px 24px rgba(72, 31, 114, 0.10);
+  border-color: #FEA3B6;
 }
 
 .slot-card-header {
@@ -1580,35 +1523,35 @@ img {
   height: 52px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-accent);
+  border: 2px solid #FEA3B6;
 }
 
 .slot-doc-info h4 {
   font-size: 1.1rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 2px;
 }
 
 .slot-doc-info p {
   font-size: 0.82rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
 }
 
 .slot-datetime-badge {
-  background: var(--color-blush);
-  border: 1px solid var(--color-blush-border);
-  border-radius: var(--radius-sm);
+  background: #FDEDED;
+  border: 1px solid #f8d5db;
+  border-radius: 10px;
   padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 .slot-datetime-badge .time-text {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
 }
 
@@ -1624,9 +1567,9 @@ img {
 
 .empty-state-box {
   grid-column: 1 / -1;
-  background: var(--color-blush);
-  border: 2px dashed var(--color-blush-border);
-  border-radius: var(--radius-lg);
+  background: #FDEDED;
+  border: 2px dashed #f8d5db;
+  border-radius: 24px;
   padding: 60px 24px;
   text-align: center;
   max-width: 600px;
@@ -1636,15 +1579,15 @@ img {
 .empty-state-icon {
   width: 72px;
   height: 72px;
-  background: var(--color-white);
-  color: var(--color-primary);
+  background: #FFFFFF;
+  color: #481F72;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   margin: 0 auto 18px auto;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 
@@ -1652,14 +1595,14 @@ img {
 .booking-view-wrapper {
   display: none; 
   padding: 60px 0 100px 0;
-  background: linear-gradient(180deg, var(--color-blush-soft), var(--color-white));
+  background: linear-gradient(180deg, #fcf4f4, #FFFFFF);
   min-height: 100vh;
 }
 
 .booking-hero-card {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: #481F72;
+  color: #FFFFFF;
+  border-radius: 24px;
   padding: 28px 36px;
   display: flex;
   align-items: center;
@@ -1667,7 +1610,7 @@ img {
   flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 40px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 40px rgba(72, 31, 114, 0.14);
 }
 
 .booking-hero-doc {
@@ -1681,25 +1624,25 @@ img {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--color-accent);
+  border: 3px solid #FEA3B6;
 }
 
 .booking-hero-doc-text h2 {
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1.8rem;
   margin-bottom: 4px;
 }
 
 .booking-hero-doc-text p {
-  color: var(--color-accent);
+  color: #FEA3B6;
   font-size: 0.95rem;
   font-weight: 600;
 }
 
 .booking-hero-slot-pill {
   background: rgba(255, 255, 255, 0.14);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
+  border: 1px solid #FEA3B6;
+  border-radius: 16px;
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -1715,12 +1658,12 @@ img {
 .slot-pill-label {
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: #FEA3B6;
   font-weight: 700;
 }
 
 .slot-pill-val {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
 }
@@ -1744,7 +1687,7 @@ img {
   left: 30px;
   right: 30px;
   height: 4px;
-  background: var(--color-blush-border);
+  background: #f8d5db;
   z-index: 1;
 }
 
@@ -1762,48 +1705,48 @@ img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--color-white);
-  border: 3px solid var(--color-blush-border);
-  color: var(--color-text-muted);
-  font-family: var(--font-heading);
+  background: #FFFFFF;
+  border: 3px solid #f8d5db;
+  color: #6e5e78;
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wizard-step-item.active .step-bubble {
-  background: var(--color-primary);
-  border-color: var(--color-accent);
-  color: var(--color-white);
+  background: #481F72;
+  border-color: #FEA3B6;
+  color: #FFFFFF;
   box-shadow: 0 0 0 6px rgba(254, 163, 182, 0.35);
 }
 
 .wizard-step-item.completed .step-bubble {
-  background: var(--color-accent);
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  background: #FEA3B6;
+  border-color: #481F72;
+  color: #481F72;
 }
 
 .step-label {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: #6e5e78;
 }
 
 .wizard-step-item.active .step-label {
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 
 .wizard-form-card {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
+  background: #FFFFFF;
+  border-radius: 32px;
   padding: 42px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 40px rgba(72, 31, 114, 0.14);
   border: 1px solid rgba(72, 31, 114, 0.08);
   max-width: 900px;
   margin: 0 auto;
@@ -1820,33 +1763,33 @@ img {
 
 .form-step-title {
   font-size: 1.7rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 6px;
 }
 
 .form-step-desc {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   margin-bottom: 28px;
 }
 
 
 .autofill-banner {
-  background: var(--color-blush);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
+  background: #FDEDED;
+  border: 1px solid #FEA3B6;
+  border-radius: 16px;
   padding: 12px 20px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.92rem;
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 .autofill-banner button {
   background: none;
-  color: var(--color-accent-dark);
+  color: #e0778c;
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
@@ -1877,26 +1820,26 @@ img {
 }
 
 .form-label {
-  font-family: var(--font-body);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 12px 18px;
-  background: var(--color-blush);
-  border: 1px solid var(--color-blush-border);
-  border-radius: var(--radius-sm);
+  background: #FDEDED;
+  border: 1px solid #f8d5db;
+  border-radius: 10px;
   font-size: 0.95rem;
-  color: var(--color-text-main);
-  transition: var(--transition-normal);
+  color: #2D1B36;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
-  background: var(--color-white);
-  border-color: var(--color-accent);
+  background: #FFFFFF;
+  border-color: #FEA3B6;
   box-shadow: 0 0 0 3px rgba(254, 163, 182, 0.3);
 }
 
@@ -1907,35 +1850,35 @@ img {
 
 
 .upload-dropzone {
-  border: 2.5px dashed var(--color-accent);
-  background: var(--color-blush);
-  border-radius: var(--radius-lg);
+  border: 2.5px dashed #FEA3B6;
+  background: #FDEDED;
+  border-radius: 24px;
   padding: 40px 24px;
   text-align: center;
   cursor: pointer;
-  transition: all var(--transition-normal);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .upload-dropzone:hover,
 .upload-dropzone.dragover {
   background: #fce5e8;
-  border-color: var(--color-primary);
+  border-color: #481F72;
   transform: scale(1.01);
 }
 
 .upload-icon-circle {
   width: 68px;
   height: 68px;
-  background: var(--color-white);
-  color: var(--color-primary);
+  background: #FFFFFF;
+  color: #481F72;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
   margin: 0 auto 16px auto;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
 }
 
 .upload-preview-area {
@@ -1949,17 +1892,17 @@ img {
 .preview-thumb {
   width: 130px;
   height: 130px;
-  border-radius: var(--radius-md);
+  border-radius: 16px;
   object-fit: cover;
-  border: 3px solid var(--color-accent);
-  box-shadow: var(--shadow-md);
+  border: 3px solid #FEA3B6;
+  box-shadow: 0 8px 24px rgba(72, 31, 114, 0.10);
 }
 
 
 .summary-review-card {
-  background: var(--color-blush-soft);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-blush-border);
+  background: #fcf4f4;
+  border-radius: 24px;
+  border: 1px solid #f8d5db;
   padding: 28px;
   margin-bottom: 30px;
 }
@@ -1967,7 +1910,7 @@ img {
 .summary-section-block {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1.5px dashed var(--color-accent);
+  border-bottom: 1.5px dashed #FEA3B6;
 }
 
 .summary-section-block:last-child {
@@ -1977,10 +1920,10 @@ img {
 }
 
 .summary-section-title {
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #481F72;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
@@ -1997,7 +1940,7 @@ img {
 }
 
 .summary-item strong {
-  color: var(--color-primary);
+  color: #481F72;
 }
 
 
@@ -2007,7 +1950,7 @@ img {
   justify-content: space-between;
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid var(--color-blush-border);
+  border-top: 1px solid #f8d5db;
 }
 
 
@@ -2019,13 +1962,13 @@ img {
 }
 
 .success-celebration-card {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
-  border: 2px solid var(--color-accent);
+  background: #FFFFFF;
+  border-radius: 32px;
+  border: 2px solid #FEA3B6;
   padding: 48px;
   max-width: 720px;
   margin: 0 auto;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 40px rgba(72, 31, 114, 0.14);
   position: relative;
   overflow: hidden;
 }
@@ -2033,15 +1976,15 @@ img {
 .success-icon-badge {
   width: 90px;
   height: 90px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  color: var(--color-white);
+  background: linear-gradient(135deg, #481F72, #FEA3B6);
+  color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
   margin: 0 auto 20px auto;
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 0 25px rgba(254, 163, 182, 0.45);
   animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -2053,19 +1996,19 @@ img {
 
 .success-title {
   font-size: 2.2rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 10px;
 }
 
 .success-subtitle {
   font-size: 1.05rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   margin-bottom: 30px;
 }
 
 .success-ticket-box {
-  background: var(--color-blush);
-  border-radius: var(--radius-lg);
+  background: #FDEDED;
+  border-radius: 24px;
   padding: 24px;
   margin-bottom: 32px;
   text-align: left;
@@ -2074,10 +2017,10 @@ img {
 
 
 .history-filter-strip {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border-radius: 24px;
   padding: 22px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
   border: 1px solid rgba(72, 31, 114, 0.08);
   margin-bottom: 32px;
 }
@@ -2103,28 +2046,28 @@ img {
 }
 
 .history-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(72, 31, 114, 0.07);
   border: 1px solid rgba(72, 31, 114, 0.08);
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .history-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--color-accent);
+  box-shadow: 0 20px 48px rgba(72, 31, 114, 0.18);
+  border-color: #FEA3B6;
 }
 
 .history-card-img-wrap {
   position: relative;
   width: 100%;
   height: 200px;
-  background-color: var(--color-blush);
+  background-color: #FDEDED;
 }
 
 .history-card-img-wrap img {
@@ -2149,7 +2092,7 @@ img {
 
 .history-pet-title {
   font-size: 1.35rem;
-  color: var(--color-primary);
+  color: #481F72;
   margin-bottom: 4px;
   display: flex;
   align-items: center;
@@ -2158,17 +2101,17 @@ img {
 
 .history-pet-species {
   font-size: 0.85rem;
-  color: var(--color-accent-dark);
+  color: #e0778c;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .history-condition-pill {
-  background: var(--color-blush);
-  border: 1px solid var(--color-blush-border);
-  color: var(--color-primary);
+  background: #FDEDED;
+  border: 1px solid #f8d5db;
+  color: #481F72;
   padding: 6px 12px;
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   font-weight: 700;
   font-size: 0.88rem;
   margin-bottom: 14px;
@@ -2176,17 +2119,17 @@ img {
 
 .history-symptoms-snippet {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   line-height: 1.5;
   margin-bottom: 16px;
   flex-grow: 1;
 }
 
 .history-card-meta {
-  border-top: 1px solid var(--color-blush-border);
+  border-top: 1px solid #f8d5db;
   padding-top: 12px;
   font-size: 0.84rem;
-  color: var(--color-text-muted);
+  color: #6e5e78;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -2210,10 +2153,10 @@ img {
   pointer-events: auto;
   width: 380px;
   max-width: calc(100vw - 48px);
-  background: var(--color-white);
-  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border-radius: 16px;
   box-shadow: 0 16px 36px rgba(72, 31, 114, 0.22);
-  border: 2px solid var(--color-accent);
+  border: 2px solid #FEA3B6;
   overflow: hidden;
   animation: slideInToast 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -2224,19 +2167,19 @@ img {
 }
 
 .toast-header {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #481F72;
+  color: #FFFFFF;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--font-heading);
+  font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.92rem;
   font-weight: 600;
 }
 
 .toast-header i.accent-icon {
-  color: var(--color-accent);
+  color: #FEA3B6;
 }
 
 .toast-close-btn {
@@ -2250,7 +2193,7 @@ img {
 .toast-body {
   padding: 16px;
   font-size: 0.92rem;
-  color: var(--color-text-main);
+  color: #2D1B36;
   line-height: 1.5;
 }
 
@@ -2275,14 +2218,14 @@ img {
 }
 
 .modal-dialog {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
+  background: #FFFFFF;
+  border-radius: 32px;
   max-width: 680px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: var(--shadow-hover);
-  border: 2px solid var(--color-accent);
+  box-shadow: 0 20px 48px rgba(72, 31, 114, 0.18);
+  border: 2px solid #FEA3B6;
   animation: modalPop 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -2292,8 +2235,8 @@ img {
 }
 
 .modal-header {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #481F72;
+  color: #FFFFFF;
   padding: 20px 28px;
   display: flex;
   align-items: center;
@@ -2301,13 +2244,13 @@ img {
 }
 
 .modal-header h3 {
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1.4rem;
 }
 
 .modal-close {
   background: none;
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1.6rem;
   cursor: pointer;
 }
@@ -2330,10 +2273,10 @@ img {
 
 
 .site-footer {
-  background: var(--color-primary-dark);
+  background: #37155a;
   color: rgba(255, 255, 255, 0.85);
   padding: 70px 0 30px 0;
-  border-top: 3px solid var(--color-accent);
+  border-top: 3px solid #FEA3B6;
 }
 
 .footer-grid {
@@ -2344,7 +2287,7 @@ img {
 }
 
 .footer-col h4 {
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 1.25rem;
   margin-bottom: 18px;
 }
@@ -2358,7 +2301,7 @@ img {
 }
 
 .footer-links a:hover {
-  color: var(--color-accent);
+  color: #FEA3B6;
   padding-left: 4px;
 }
 
@@ -2716,7 +2659,7 @@ img {
           
           <div class="filter-status-pills">
             <span
-              style="font-family:var(--font-heading); font-size:0.9rem; color:var(--color-primary); font-weight:700; margin-right:6px;">Status:</span>
+              style="font-family:'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif; font-size:0.9rem; color:#481F72; font-weight:700; margin-right:6px;">Status:</span>
             <button class="filter-pill-btn appt-status-pill active" data-status="all">All Slots</button>
             <button class="filter-pill-btn appt-status-pill" data-status="available"><i class="fas fa-check-circle"></i>
               Available Only</button>
@@ -2774,7 +2717,7 @@ img {
           
           <div class="history-species-pills">
             <span
-              style="font-family:var(--font-heading); font-size:0.9rem; color:var(--color-primary); font-weight:700; margin-right:6px;">Species:</span>
+              style="font-family:'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif; font-size:0.9rem; color:#481F72; font-weight:700; margin-right:6px;">Species:</span>
             <button class="filter-pill-btn history-species-pill active" data-species="all">All Animals</button>
             <button class="filter-pill-btn history-species-pill" data-species="Dog"><i class="fas fa-dog"></i>
               Dogs</button>
@@ -3043,9 +2986,9 @@ img {
               <div class="upload-icon-circle">
                 <i class="fas fa-cloud-upload-alt"></i>
               </div>
-              <h4 style="font-size:1.25rem; color:var(--color-primary); margin-bottom:6px;">Drag & Drop Pet Photo Here
+              <h4 style="font-size:1.25rem; color:#481F72; margin-bottom:6px;">Drag & Drop Pet Photo Here
               </h4>
-              <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:14px;">or click to browse from
+              <p style="font-size:0.9rem; color:#6e5e78; margin-bottom:14px;">or click to browse from
                 your device (PNG, JPG, WebP)</p>
               <span class="btn btn-sm btn-outline-primary"><i class="fas fa-folder-open"></i> Select Photo</span>
             </div>
@@ -3053,8 +2996,8 @@ img {
             <div class="upload-preview-area" id="pet-preview-wrap" style="display:none;">
               <img id="pet-preview-img" class="preview-thumb" src="" alt="Pet Preview">
               <div style="text-align:left;">
-                <h4 style="color:var(--color-primary); font-size:1.15rem; margin-bottom:4px;">Photo Selected!</h4>
-                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:12px;">Image ready for
+                <h4 style="color:#481F72; font-size:1.15rem; margin-bottom:4px;">Photo Selected!</h4>
+                <p style="font-size:0.85rem; color:#6e5e78; margin-bottom:12px;">Image ready for
                   clinical file</p>
                 <div style="display:flex; gap:10px;">
                   <button type="button" class="btn btn-sm btn-primary"
@@ -3076,7 +3019,7 @@ img {
           </div>
 
           <div
-            style="background:var(--color-blush); padding:16px 20px; border-radius:var(--radius-md); font-size:0.9rem; color:var(--color-primary); margin-bottom:24px; border:1px solid var(--color-accent);">
+            style="background:#FDEDED; padding:16px 20px; border-radius:16px; font-size:0.9rem; color:#481F72; margin-bottom:24px; border:1px solid #FEA3B6;">
             <i class="fas fa-info-circle"></i> <strong>Critical Notice:</strong> Upon clicking confirm, this specific
             time slot will immediately convert from <strong>Available &rarr; Booked</strong>, and your pet's file will
             be archived in the clinical system.
@@ -3116,18 +3059,18 @@ img {
 
           <div class="success-ticket-box">
             <div
-              style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid var(--color-blush-border); padding-bottom:10px;">
-              <span style="font-family:var(--font-heading); font-weight:700; color:var(--color-primary);">Official
+              style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid #f8d5db; padding-bottom:10px;">
+              <span style="font-family:'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif; font-weight:700; color:#481F72;">Official
                 Booking Pass</span>
               <span class="appointment-id-tag" id="success-appt-id">FEC-2026-000000</span>
             </div>
 
             <div style="display:flex; gap:20px; align-items:center; margin-bottom:16px;">
               <img id="success-pet-img" src="" alt="Pet"
-                style="width:72px; height:72px; border-radius:var(--radius-md); object-fit:cover; border:2px solid var(--color-accent);">
+                style="width:72px; height:72px; border-radius:16px; object-fit:cover; border:2px solid #FEA3B6;">
               <div>
-                <h4 id="success-pet-name" style="color:var(--color-primary); font-size:1.2rem;">Pet Name</h4>
-                <div style="font-size:0.88rem; color:var(--color-text-muted);">Owner: <span
+                <h4 id="success-pet-name" style="color:#481F72; font-size:1.2rem;">Pet Name</h4>
+                <div style="font-size:0.88rem; color:#6e5e78;">Owner: <span
                     id="success-owner-name"></span></div>
               </div>
             </div>
@@ -4047,7 +3990,7 @@ const App = {
       <div class="user-appointment-card animate-fade-in-up">
         <div class="appointment-header-band">
           <h3>
-            <i class="fas fa-paw" style="color: var(--color-accent);"></i>
+            <i class="fas fa-paw" style="color: #FEA3B6;"></i>
             My Pet & Appointment: ${appt.petName}
           </h3>
           <div style="display:flex; align-items:center; gap:10px;">
@@ -4064,7 +4007,7 @@ const App = {
 
           
           <div class="pet-info-block">
-            <h4>${appt.petName} <span style="font-size:0.85rem; color:var(--color-accent-dark); font-weight:600;">(${appt.animalType})</span></h4>
+            <h4>${appt.petName} <span style="font-size:0.85rem; color:#e0778c; font-weight:600;">(${appt.animalType})</span></h4>
             <ul class="pet-meta-list">
               <li><strong>Breed:</strong> ${appt.breed || "Mixed"}</li>
               <li><strong>Age & Gender:</strong> ${appt.age || "N/A"} · ${appt.gender || "Unknown"}</li>
@@ -4076,9 +4019,9 @@ const App = {
           
           <div class="doctor-booked-summary">
             <div class="doc-heading"><i class="fas fa-user-md"></i> ${appt.doctorName}</div>
-            <div style="font-size:0.85rem; color:var(--color-text-muted);">${appt.doctorSpecialization}</div>
+            <div style="font-size:0.85rem; color:#6e5e78;">${appt.doctorSpecialization}</div>
             <div class="slot-highlight"><i class="far fa-calendar-alt"></i> ${appt.day}, ${appt.date} at ${appt.time}</div>
-            <div style="font-size:0.82rem; margin-top:4px; color:var(--color-primary);"><i class="fas fa-map-marker-alt"></i> ${appt.doctorClinic || "OakHaven Central Hospital"}</div>
+            <div style="font-size:0.82rem; margin-top:4px; color:#481F72;"><i class="fas fa-map-marker-alt"></i> ${appt.doctorClinic || "OakHaven Central Hospital"}</div>
           </div>
 
           
@@ -4122,7 +4065,7 @@ const App = {
               <i class="fas fa-shield-alt"></i> Verified Specialist
             </div>
             <div class="doctor-rating-floating">
-              <i class="fas fa-star star-icon"></i> ${doc.rating} <span style="font-size:0.75rem; color:var(--color-text-muted);">(${doc.reviewsCount})</span>
+              <i class="fas fa-star star-icon"></i> ${doc.rating} <span style="font-size:0.75rem; color:#6e5e78;">(${doc.reviewsCount})</span>
             </div>
           </div>
 
@@ -4133,7 +4076,7 @@ const App = {
             
             <div class="doctor-pill-row">
               <span class="badge badge-specialization"><i class="fas fa-stethoscope"></i> ${doc.specialization}</span>
-              <span class="badge" style="background:var(--color-primary-muted); color:var(--color-primary);"><i class="fas fa-award"></i> ${doc.experience}</span>
+              <span class="badge" style="background:rgba(72, 31, 114, 0.08); color:#481F72;"><i class="fas fa-award"></i> ${doc.experience}</span>
             </div>
 
             
@@ -4158,7 +4101,7 @@ const App = {
             <div class="slots-container">
               <div class="slots-header">
                 <span><i class="far fa-clock"></i> Weekly Time Slots</span>
-                <span style="font-size:0.78rem; color:var(--color-primary); font-weight:700;">Pink = Available</span>
+                <span style="font-size:0.78rem; color:#481F72; font-weight:700;">Pink = Available</span>
               </div>
               <div class="slot-chips-grid">
                 ${doc.slots.slice(0, 7).map(slot => `
@@ -4170,7 +4113,7 @@ const App = {
                   </button>
                 `).join("")}
                 ${doc.slots.length > 7 ? `
-                  <button class="slot-chip" style="background:var(--color-blush); color:var(--color-primary); border:1px solid var(--color-accent);" onclick="App.openDoctorModal('${doc.id}')">
+                  <button class="slot-chip" style="background:#FDEDED; color:#481F72; border:1px solid #FEA3B6;" onclick="App.openDoctorModal('${doc.id}')">
                     +${doc.slots.length - 7} More
                   </button>
                 ` : ''}
@@ -4280,8 +4223,8 @@ const App = {
       container.innerHTML = `
         <div class="empty-state-box">
           <div class="empty-state-icon"><i class="fas fa-calendar-times"></i></div>
-          <h4 style="color:var(--color-primary); font-size:1.3rem; margin-bottom:8px;">No Appointment Slots Match Your Filter</h4>
-          <p style="color:var(--color-text-muted); margin-bottom:18px;">Try adjusting your search criteria, clearing the date, or selecting another veterinarian.</p>
+          <h4 style="color:#481F72; font-size:1.3rem; margin-bottom:8px;">No Appointment Slots Match Your Filter</h4>
+          <p style="color:#6e5e78; margin-bottom:18px;">Try adjusting your search criteria, clearing the date, or selecting another veterinarian.</p>
           <button class="btn btn-sm btn-primary" onclick="App.resetAppointmentFilters()">
             <i class="fas fa-redo"></i> Reset All Filters
           </button>
@@ -4374,8 +4317,8 @@ const App = {
       grid.innerHTML = `
         <div class="empty-state-box">
           <div class="empty-state-icon"><i class="fas fa-folder-open"></i></div>
-          <h4 style="color:var(--color-primary); font-size:1.3rem; margin-bottom:8px;">No Medical Records Match Your Query</h4>
-          <p style="color:var(--color-text-muted); margin-bottom:18px;">Try searching by pet name, breed, clinical condition, or attending doctor.</p>
+          <h4 style="color:#481F72; font-size:1.3rem; margin-bottom:8px;">No Medical Records Match Your Query</h4>
+          <p style="color:#6e5e78; margin-bottom:18px;">Try searching by pet name, breed, clinical condition, or attending doctor.</p>
           <button class="btn btn-sm btn-primary" onclick="App.resetHistoryFilters()">
             <i class="fas fa-redo"></i> Reset Medical Filters
           </button>
@@ -4394,7 +4337,7 @@ const App = {
         <div class="history-card-body">
           <div class="history-pet-title">
             <span>${rec.petName}</span>
-            <span style="font-size:0.85rem; color:var(--color-text-muted);">${rec.age}</span>
+            <span style="font-size:0.85rem; color:#6e5e78;">${rec.age}</span>
           </div>
           <div class="history-pet-species">
             <i class="fas fa-paw"></i> ${rec.animalType} — ${rec.breed} (${rec.gender || 'N/A'})
@@ -4409,9 +4352,9 @@ const App = {
           </div>
 
           <div class="history-card-meta">
-            <div><i class="fas fa-user-md" style="color:var(--color-primary);"></i> <strong>Doctor:</strong> ${rec.doctor}</div>
-            <div><i class="fas fa-user" style="color:var(--color-primary);"></i> <strong>Owner:</strong> ${rec.ownerName}</div>
-            <div><i class="far fa-calendar-alt" style="color:var(--color-primary);"></i> <strong>Visit Date:</strong> ${rec.visitDate}</div>
+            <div><i class="fas fa-user-md" style="color:#481F72;"></i> <strong>Doctor:</strong> ${rec.doctor}</div>
+            <div><i class="fas fa-user" style="color:#481F72;"></i> <strong>Owner:</strong> ${rec.ownerName}</div>
+            <div><i class="far fa-calendar-alt" style="color:#481F72;"></i> <strong>Visit Date:</strong> ${rec.visitDate}</div>
           </div>
 
           <button class="btn btn-sm btn-outline-primary" style="margin-top:auto;" onclick="App.openHistoryModal('${rec.id}')">
@@ -4479,16 +4422,16 @@ const App = {
 
     modalBody.innerHTML = `
       <div style="display:flex; gap:24px; align-items:center; margin-bottom:24px; flex-wrap:wrap;">
-        <img src="${doctor.image}" alt="${doctor.name}" style="width:110px; height:110px; border-radius:50%; object-fit:cover; border:3px solid var(--color-accent);">
+        <img src="${doctor.image}" alt="${doctor.name}" style="width:110px; height:110px; border-radius:50%; object-fit:cover; border:3px solid #FEA3B6;">
         <div>
-          <h3 style="font-size:1.6rem; color:var(--color-primary); margin-bottom:4px;">${doctor.name}</h3>
-          <div style="color:var(--color-accent-dark); font-weight:700; margin-bottom:8px;">${doctor.specialization}</div>
-          <div style="font-size:0.92rem; color:var(--color-text-muted);"><i class="fas fa-university"></i> ${doctor.education}</div>
+          <h3 style="font-size:1.6rem; color:#481F72; margin-bottom:4px;">${doctor.name}</h3>
+          <div style="color:#e0778c; font-weight:700; margin-bottom:8px;">${doctor.specialization}</div>
+          <div style="font-size:0.92rem; color:#6e5e78;"><i class="fas fa-university"></i> ${doctor.education}</div>
         </div>
       </div>
 
-      <div style="background:var(--color-blush); padding:18px; border-radius:var(--radius-md); margin-bottom:20px; font-size:0.95rem; line-height:1.6;">
-        <h4 style="margin-bottom:6px; color:var(--color-primary); font-size:1.1rem;"><i class="fas fa-info-circle"></i> Clinical Biography</h4>
+      <div style="background:#FDEDED; padding:18px; border-radius:16px; margin-bottom:20px; font-size:0.95rem; line-height:1.6;">
+        <h4 style="margin-bottom:6px; color:#481F72; font-size:1.1rem;"><i class="fas fa-info-circle"></i> Clinical Biography</h4>
         ${doctor.bio}
       </div>
 
@@ -4501,7 +4444,7 @@ const App = {
         <div><strong>Phone:</strong> <a href="tel:${doctor.phone}">${doctor.phone}</a></div>
       </div>
 
-      <h4 style="margin-bottom:12px; color:var(--color-primary); font-size:1.15rem;"><i class="far fa-calendar-alt"></i> Available Appointment Slots</h4>
+      <h4 style="margin-bottom:12px; color:#481F72; font-size:1.15rem;"><i class="far fa-calendar-alt"></i> Available Appointment Slots</h4>
       <div class="slot-chips-grid">
         ${doctor.slots.map(slot => `
           <button class="slot-chip ${slot.status}" 
@@ -4530,16 +4473,16 @@ const App = {
 
     modalBody.innerHTML = `
       <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
-        <img src="${record.image}" alt="${record.petName}" style="width:100px; height:100px; border-radius:var(--radius-md); object-fit:cover; border:2px solid var(--color-accent);">
+        <img src="${record.image}" alt="${record.petName}" style="width:100px; height:100px; border-radius:16px; object-fit:cover; border:2px solid #FEA3B6;">
         <div>
-          <h3 style="font-size:1.5rem; color:var(--color-primary);">${record.petName} ${record.badge ? `<span class="badge badge-new-appointment">${record.badge}</span>` : ''}</h3>
-          <div style="font-weight:700; color:var(--color-accent-dark);">${record.breed} · ${record.age} · ${record.gender} · ${record.weight}</div>
-          <div style="font-size:0.88rem; color:var(--color-text-muted); margin-top:4px;">Owner: ${record.ownerName} (${record.ownerPhone || 'Registered'})</div>
+          <h3 style="font-size:1.5rem; color:#481F72;">${record.petName} ${record.badge ? `<span class="badge badge-new-appointment">${record.badge}</span>` : ''}</h3>
+          <div style="font-weight:700; color:#e0778c;">${record.breed} · ${record.age} · ${record.gender} · ${record.weight}</div>
+          <div style="font-size:0.88rem; color:#6e5e78; margin-top:4px;">Owner: ${record.ownerName} (${record.ownerPhone || 'Registered'})</div>
         </div>
       </div>
 
-      <div style="background:var(--color-blush); padding:16px; border-radius:var(--radius-md); margin-bottom:16px;">
-        <div style="font-weight:700; color:var(--color-primary); margin-bottom:4px;"><i class="fas fa-stethoscope"></i> Primary Diagnosis / Condition</div>
+      <div style="background:#FDEDED; padding:16px; border-radius:16px; margin-bottom:16px;">
+        <div style="font-weight:700; color:#481F72; margin-bottom:4px;"><i class="fas fa-stethoscope"></i> Primary Diagnosis / Condition</div>
         <div style="font-size:1.05rem; font-weight:600;">${record.medicalCondition}</div>
       </div>
 
@@ -4570,23 +4513,23 @@ const App = {
 
     modalBody.innerHTML = `
       <div style="text-align:center; margin-bottom:20px;">
-        <div style="display:inline-block; background:var(--color-blush); padding:10px 24px; border-radius:var(--radius-pill); border:1px solid var(--color-accent); font-family:var(--font-heading); font-size:1.1rem; color:var(--color-primary); font-weight:700;">
+        <div style="display:inline-block; background:#FDEDED; padding:10px 24px; border-radius:9999px; border:1px solid #FEA3B6; font-family:'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.1rem; color:#481F72; font-weight:700;">
           CONFIRMED VETERINARY APPOINTMENT
         </div>
       </div>
 
       <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px;">
-        <img src="${appt.petImage}" alt="${appt.petName}" style="width:90px; height:90px; border-radius:var(--radius-md); object-fit:cover; border:2px solid var(--color-accent);">
+        <img src="${appt.petImage}" alt="${appt.petName}" style="width:90px; height:90px; border-radius:16px; object-fit:cover; border:2px solid #FEA3B6;">
         <div>
-          <h3 style="color:var(--color-primary); font-size:1.4rem;">Patient: ${appt.petName}</h3>
+          <h3 style="color:#481F72; font-size:1.4rem;">Patient: ${appt.petName}</h3>
           <div>${appt.animalType} · ${appt.breed} · ${appt.age}</div>
-          <div style="font-size:0.88rem; color:var(--color-text-muted);">Owner: ${appt.ownerName} | ${appt.ownerPhone}</div>
+          <div style="font-size:0.88rem; color:#6e5e78;">Owner: ${appt.ownerName} | ${appt.ownerPhone}</div>
         </div>
       </div>
 
-      <div style="background:var(--color-primary); color:white; padding:18px; border-radius:var(--radius-md); margin-bottom:20px;">
-        <div style="font-size:0.85rem; color:var(--color-accent); text-transform:uppercase; font-weight:700;">Scheduled Consultation</div>
-        <div style="font-family:var(--font-heading); font-size:1.3rem; margin:4px 0;">${appt.day}, ${appt.date} at ${appt.time}</div>
+      <div style="background:#481F72; color:white; padding:18px; border-radius:16px; margin-bottom:20px;">
+        <div style="font-size:0.85rem; color:#FEA3B6; text-transform:uppercase; font-weight:700;">Scheduled Consultation</div>
+        <div style="font-family:'Fredoka', -apple-system, BlinkMacSystemFont, sans-serif; font-size:1.3rem; margin:4px 0;">${appt.day}, ${appt.date} at ${appt.time}</div>
         <div style="font-size:0.95rem;"><i class="fas fa-user-md"></i> ${appt.doctorName} (${appt.doctorSpecialization})</div>
         <div style="font-size:0.85rem; color:rgba(255,255,255,0.8); margin-top:4px;"><i class="fas fa-hospital"></i> ${appt.doctorClinic}</div>
       </div>
